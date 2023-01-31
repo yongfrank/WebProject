@@ -1,0 +1,91 @@
+<!--
+ * @Author: Frank Chu
+ * @Date: 2022-10-28 14:25:15
+ * @LastEditors: Frank Chu
+ * @LastEditTime: 2022-10-28 15:22:01
+ * @FilePath: /WebProject/lab/lab1-jQuery/index.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by Frank Chu, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery-3.3.1.js"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script> -->
+</head>
+
+<body>
+    <!-- <script type="text/javascript"></script> -->
+    <script>
+        $(document).ready(function () {
+            alert("hello syl");
+        });
+
+        // can only show "test 3"
+        window.onload = function() {
+            alert("test 2");
+        };
+        window.onload = function() {
+            alert("test 3");
+        };
+
+        $(function() {
+            alert("Just Function");
+            $(".level1>a").click(function() {
+                $(this)
+                    .addClass("current") // give current template
+                    .next()
+                    .show() // show next element
+                    .parent()
+                    .siblings()
+                    .children("a")
+                    .removeClass("current") // parent's other child element remove current template
+                    .next()
+                    .hide(); // hide next element
+                return false;
+            });
+        });
+    </script>
+
+    <div class="box">
+        <p>This is a paragraph</p>
+        <button>Tap Me!</button>
+        <ul class="menu">
+            <li class="level1">
+                <a href="#">Spring</a>
+                <ul class="level2">
+                    <li>What a Spring</li>
+                    <li>What a Spring</li>
+                    <li>What a Spring</li>
+                    <li>What a Spring</li>
+                </ul>
+            </li>
+
+            <li class="level1">
+                <a href="#">Summer</a>
+                <ul class="level2">
+                    <li>What a Summer</li>
+                    <li>What a Summer</li>
+                    <li>What a Summer</li>
+                    <li>What a Summer</li>
+                </ul>
+            </li>
+
+            <li class="level1">
+                <a href="#">Autumn</a>
+                <ul class="level2">
+                    <li>What a autumn</li>
+                    <li>What a autumn</li>
+                    <li>What a autumn</li>
+                    <li>What a autumn</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

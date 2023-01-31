@@ -1,0 +1,10 @@
+body {
+    width: 60%;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+}
+
+.title {
+    color: red;
+}

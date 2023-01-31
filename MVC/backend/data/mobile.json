@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "brand": "Apple",
+        "model": "iPhone 6",
+        "price": 499,
+        "spec": {
+            "color": "white",
+            "size": "5.5",
+            "weight": "0.5"
+        }
+    }, 
+    {
+        "id": 2,
+        "brand": "Samsung",
+        "model": "Galaxy S6",
+        "price": 499,
+        "spec": {
+            "color": "black",
+            "size": "5.5",
+            "weight": "0.5"
+        }
+    },
+    {
+        "id": 3,
+        "brand": "Samsung",
+        "model": "Galaxy S7",
+        "price": 599,
+        "spec": {
+            "color": "black",
+            "size": "5.5",
+            "weight": "0.5"
+        }
+    },
+    {
+        "id": 4,
+        "brand": "Apple",
+        "model": "iPhone 7",
+        "price": 599,
+        "spec": {
+            "color": "white",
+            "size": "5.5",
+            "weight": "0.5"
+        }
+    }
+]
