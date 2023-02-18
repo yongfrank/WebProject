@@ -1,5 +1,13 @@
 .App {
-  text-align: center;
+  padding: 10px;
+}
+
+.Petition {
+  font-family: "Gill Sans", sans-serif;
+  padding: 1em;
+  background-color: cyan;
+  margin-top: 5px;
+  border-radius: 10px;
 }
 
 .App-logo {
