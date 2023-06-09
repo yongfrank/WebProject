@@ -2,8 +2,8 @@
  * @Author: Frank Chu
  * @Date: 2023-02-13 18:05:53
  * @LastEditors: Frank Chu
- * @LastEditTime: 2023-02-18 12:38:19
- * @FilePath: /SmartSpeaker/README.md
+ * @LastEditTime: 2023-02-24 22:45:38
+ * @FilePath: /WebProject/SmartSpeaker/README.md
  * @Description: 
  * 
  * Copyright (c) 2023 by ${git_name}, All Rights Reserved. 
@@ -33,17 +33,17 @@ graph LR;
   - [Characteristics](#characteristics)
     - [Example Questions](#example-questions)
   - [Steps](#steps)
-    - [Step 1. Install all dependencies](#step-1-install-all-dependencies)
+    - [Step 1. Install all dependencies `client - npm install`](#step-1-install-all-dependencies-client---npm-install)
     - [Step 2. Train Wake word(Optional)](#step-2-train-wake-wordoptional)
     - [Step 3. change .env.example to .env and filling .env files](#step-3-change-envexample-to-env-and-filling-env-files)
-    - [Step 4. Change TEST\_MODE to True or IS\_RASPBERRYPI in server/utils/config.py](#step-4-change-test_mode-to-true-or-is_raspberrypi-in-serverutilsconfigpy)
-    - [Step 4. run `server - app.py` and `client - npm start`](#step-4-run-server---apppy-and-client---npm-start)
+    - [Step 4. Change TEST\_MODE to True or IS\_RASPBERRYPI in `server/utils/config.py`(Important), connect url in `client/src/app.js`(Optional)](#step-4-change-test_mode-to-true-or-is_raspberrypi-in-serverutilsconfigpyimportant-connect-url-in-clientsrcappjsoptional)
+    - [Step 4. run `sh start.sh` or `server - app.py` and `client - npm start`](#step-4-run-sh-startsh-or-server---apppy-and-client---npm-start)
   - [Installation](#installation)
     - [PyAudio](#pyaudio)
       - [Installation error on macOS](#installation-error-on-macos)
     - [picovoice.ai](#picovoiceai)
     - [Azure Speech Service](#azure-speech-service)
-    - [.env](#env)
+    - [dotenv](#dotenv)
   - [Reference](#reference)
     - [Services](#services)
     - [Articles](#articles)
@@ -80,15 +80,15 @@ Names: Super Stallion, Mighty Mare, The Magnificent Equine
 
 ## Steps
 
-### Step 1. [Install all dependencies](#installation)
+### Step 1. [Install all dependencies `client - npm install`](#installation)
 
 ### Step 2. [Train Wake word(Optional)](https://console.picovoice.ai/ppn)
 
-### Step 3. [change .env.example to .env and filling .env files](#.env)
+### Step 3. [change .env.example to .env and filling .env files](#dotenv)
 
-### Step 4. Change TEST_MODE to True or IS_RASPBERRYPI in server/utils/config.py
+### Step 4. Change TEST_MODE to True or IS_RASPBERRYPI in `server/utils/config.py`(Important), connect url in `client/src/app.js`(Optional)
 
-### Step 4. run `server - app.py` and `client - npm start`
+### Step 4. run `sh start.sh` or `server - app.py` and `client - npm start`
 
 ## Installation
 
@@ -130,7 +130,7 @@ pip install azure-cognitiveservices-speech
 
 - [Install the Speech SDK](https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/quickstarts/setup-platform?pivots=programming-language-python&tabs=linux%2Cubuntu%2Cdotnet%2Cjre%2Cmaven%2Cnodejs%2Cmac%2Cpypi)
 
-### .env
+### dotenv
 
 ```bash
 cd ./code && mv .env.example .env
@@ -156,6 +156,9 @@ SPEECH_REGION=${MICROSOFT-AZURE-SPEECH-REGION}
 
 ### Articles
 
+- [Building a Raspberry Pi AI Assistant using Azure and IBM Cloud](https://fadyanwar.com/index.php/2020/06/27/building-a-raspberry-pi-ai-assistant-using-azure-and-ibm-cloud/)
+- [Live Captioning with Azure Cognitive Services!](https://www.hackster.io/jenfoxbot/live-captioning-with-azure-cognitive-services-02c3f7)
+- [Voice Assistant with Python](https://blog.csdn.net/m0_57307642/article/details/120849915)
 - [GPT-3: text-davinci-003](https://platform.openai.com/docs/models/overview)
 - [GPTHunt](https://www.bilibili.com/video/BV11M411F7Ww/?share_source=copy_web&vd_source=bf4952280cde801b178268abc99a7047)
 - [GPTSpeaker](https://mp.weixin.qq.com/s/NUGygw8JgkdemVicO6fiPw)
